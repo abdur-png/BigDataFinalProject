@@ -24,8 +24,12 @@ val filteredDF = cleanedData.filter(col("Transaction Year").between(2016, 2021))
 val intermediateDF = filteredDF.filter(col("Region") =!= "Unknown")
 
 // Count occurrences of each region for each year
-val regionCounts = intermediateDF.groupBy("Region", "Transaction Year").agg(count("Region").alias("EV_adoption_count"))
+val regionCounts = intermediateDF.groupBy("Region", "Transaction Year").agg(count("Region").alias("EV_adoption_count"),sum(when(col("New or Used Vehicle") === "New", 1).otherwise(0)).alias("new_count"),sum(when(col("New or Used Vehicle") === "Used", 1).otherwise(0)).alias("used_count"))
 
-val orderedCounts = regionCounts.orderBy("Region", "Transaction Year")
+// Calculate percentages
+val resultDF = regionCounts.withColumn("new_percentage", col("new_count") / col("EV_adoption_count") * 100).withColumn("used_percentage", col("used_count") / col("EV_adoption_count") * 100).orderBy("Region", "Transaction Year")
 
-orderedCounts.coalesce(1).write.option("header", "true").mode("overwrite").csv("aggregation16-21")
+resultDF.show()
+
+resultDF.coalesce(1).write.option("header", "true").mode("overwrite").csv("aggregation16-21")
+
