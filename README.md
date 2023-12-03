@@ -23,7 +23,7 @@
 <p>The profiling code directory contains scripts for profiling different datasets. These scripts are crucial for understanding the data's characteristics, such as distribution, outliers, and missing values, which are essential for effective data analysis.</p>
 
 <h3>5. Screenshots (screenshots)</h3>
-<p>This directory contains PDFs of screenshots showcasing the results of various analytics performed. These visual representations are helpful in understanding the outcomes of the analyses and can be used for presentations or reports.</p>
+<p>.</p>
 
 <h2>How to Use</h2>
 <p>Setup: Ensure Apache Spark and Scala are installed in your environment.<br>
