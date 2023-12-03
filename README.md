@@ -1,6 +1,6 @@
 # Energy Dynamics: A Comprehensive Analysis of Electricity Consumption, Rates, and Electric Vehicles Purchase
 
-##Overview
+**Overview**
 
 This project focuses on the analysis of three datasets: 'Electricity Consumption' Data, 'Electricity Rates Data', and 'Electric Vehicles Purchase Data'. We have conducted thorough cleaning and profiling of each dataset and performed individual analyses to gain insights into the respective domains.
 
