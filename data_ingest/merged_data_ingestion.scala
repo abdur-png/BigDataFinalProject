@@ -1,17 +1,11 @@
 import org.apache.spark.sql.{DataFrame, SparkSession}
 import org.apache.spark.sql.functions._
 import org.apache.spark.sql.types.DoubleType
-import org.apache.spark.rdd.RDD
-import scala.math.BigDecimal.RoundingMode
-
-// Initialize Spark Session
-val spark = SparkSession.builder().appName("Merge Electricity Data").getOrCreate()
-import spark.implicits._
 
 // Define the paths to the CSV files
-val consumptionDataPath = "/user/svn9705_nyu_edu/final/avg_year/part-00000-7a178ddb-3b39-4ecf-a2ac-a4d883dfc5c0-c000.csv"
-val pricingDataPath = "/user/ar7165_nyu_edu/FinalProject/growth_rates_by_region/part-00000-e8a8125e-19eb-4795-b8f2-852b12e478f1-c000.csv"
-val vehiclelDataPath = "/user/ss14758_nyu_edu/aggregation16-21/part-00000-eefee01d-2758-4013-b4eb-1caf24c88c63-c000.csv"
+val consumptionDataPath = "/user/svn9705_nyu_edu/final/consumption_agg_data.csv"
+val pricingDataPath = "/user/ar7165_nyu_edu/FinalProject/pricing_agg_data.csv"
+val vehiclelDataPath = "/user/ss14758_nyu_edu/finalproject/vehicle_agg_data.csv"
 
 val consumptionDF = spark.read.option("header", "true").option("inferSchema", "true").csv(consumptionDataPath)
 val pricingDF = spark.read.option("header", "true").option("inferSchema", "true").csv(pricingDataPath)
@@ -40,8 +34,7 @@ val finalDF = mergedDF.select(
 )
 finalDF.show()
 
-finalDF.write.format("csv").option("header", "true").save("/user/ar7165_nyu_edu/FinalProject/mergedElectricityDataSanAb")
-finalDF.write.format("csv").option("header", "true").save("/user/ss14758_nyu_edu/final_mergedData")
-finalDF.write.format("csv").option("header", "true").save("/user/svn9705_nyu_edu/final/mergedData")
+finalDF.write.option("header", "true").mode("overwrite").csv("/user/ar7165_nyu_edu/FinalProject/mergedData")
+finalDF.write.option("header", "true").mode("overwrite").csv("/user/ss14758_nyu_edu/final_mergedData")
+finalDF.write.option("header", "true").mode("overwrite").csv("/user/svn9705_nyu_edu/final/mergedData")
 
-spark.stop()
