@@ -19,20 +19,20 @@ def readCSV(path: String): DataFrame = {
 
 // Read the CSV file
 val filePath = "hw8/EV_and_RegActivity.csv"
-var EV_data = readCSV(filePath)
+var eV_data = readCSV(filePath)
 
 // Select relevant columns
-EV_data = EV_data.select(
+eV_data = eV_data.select(
   "Model Year", "Make", "Model", "Electric Range", "Odometer Reading",
   "Odometer Code", "New or Used Vehicle", "Transaction Year", "State of Residence"
 )
 
 // Drop rows with null values in any column
-EV_data = EV_data.na.drop()
+eV_data = eV_data.na.drop()
 
 // Additional cleaning steps
-EV_data = EV_data.withColumn("Odometer Reading", col("Odometer Reading").cast(DoubleType))
-EV_data = EV_data.withColumn("Transaction Year", col("Transaction Year").cast(DateType))
+eV_data = eV_data.withColumn("Odometer Reading", col("Odometer Reading").cast(DoubleType))
+eV_data = eV_data.withColumn("Transaction Year", col("Transaction Year").cast(DateType))
 
 // State to region mapping
 val stateToRegion = Map(
@@ -49,11 +49,28 @@ val stateToRegion = Map(
 val mapStateToRegion = udf((state: String) => stateToRegion.getOrElse(state, "Unknown"))
 
 // Add 'Region' column to DataFrame
-val cleaned_data = EV_data.withColumn("Region", mapStateToRegion($"State of Residence"))
+val cleaned_data = eV_data.withColumn("Region", mapStateToRegion($"State of Residence"))
 
 // Show the cleaned DataFrame
 cleaned_data.show()
 
-// Write the cleaned DataFrame to a CSV file
+
+// For joint analysis 
+val filteredDF = cleaned_data.filter(col("Transaction Year").between(2016, 2021))
+
+// Filter out rows with "Unknown" region
+val intermediateDF = filteredDF.filter(col("Region") =!= "Unknown")
+
+// Count occurrences of each region for each year
+val regionCounts = intermediateDF.groupBy("Region", "Transaction Year").agg(count("Region").alias("EV_adoption_count"),sum(when(col("New or Used Vehicle") === "New", 1).otherwise(0)).alias("new_count"),sum(when(col("New or Used Vehicle") === "Used", 1).otherwise(0)).alias("used_count"))
+
+// Calculate percentages for new and used cars
+val resultDF = regionCounts.withColumn("new_percentage", col("new_count") / col("EV_adoption_count") * 100).withColumn("used_percentage", col("used_count") / col("EV_adoption_count") * 100).orderBy("Region", "Transaction Year")
+
+resultDF.show()
+ 
+//later used for individual analysis
 cleaned_data.coalesce(1).write.option("header", "true").mode("overwrite").csv("finalproject/Cleaned_Data")
 
+//used for merged analysis
+resultDF.coalesce(1).write.option("header", "true").mode("overwrite").csv("finalproject/aggregation16-21")
