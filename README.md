@@ -4,7 +4,7 @@
 
 "ElectroAnalytica" is a Scala-based big data analytics project, leveraging Apache Spark's powerful data processing capabilities. It focuses on analyzing large datasets related to electricity pricing, consumption, and electric vehicle (EV) adoption. The project's goal is to uncover insights and trends within these domains, providing valuable information for decision-making in energy management and policy formulation.
 
-<h2>Repository Structure and Detailed Description</h2>
+<h2>Repository Structure </h2>
 
 <h3>1. Analytics Code (ana_code)</h3>
 <ul>
