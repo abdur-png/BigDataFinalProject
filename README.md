@@ -59,6 +59,6 @@ Customization: Modify the data paths in the scripts to point to your datasets.</
   Description of the dataset and its significance.
 
 <h2>Results</h2>
-![image](https://github.com/abdur-png/BigDataFinalProject/assets/85699181/cc59f1a8-631a-4c5f-b7b3-29e5cb184f5d)
+![image](https://github.com/abdur-png/BigDataFinalProject/visualizations/graph.png)
 
 
