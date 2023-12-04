@@ -92,15 +92,15 @@ Customization: Modify the data paths in the scripts to point to your datasets.</
 ![list](/visualizations/graph.png)
 
 
-<h5>Correlation between Electricity Demand and Pricing (Corr_demand_price):</h5>
+<h4>Correlation between Electricity Demand and Pricing (Corr_demand_price):</h4>
 The correlation coefficient is approximately -0.29.
 This negative correlation suggests that there is a moderate inverse relationship between electricity demand and pricing. In other words,   as electricity demand increases, pricing tends to decrease, and vice versa.
 
-<h5>Correlation between Electricity Demand and EV Adoption (Corr_demand_ev):</h5>
+<h4>Correlation between Electricity Demand and EV Adoption (Corr_demand_ev):</h4>
 The correlation coefficient is approximately -0.16.
 This negative correlation indicates a weak inverse relationship between electricity demand and electric vehicle adoption. It suggests that as electricity demand increases, there is a slight tendency for EV adoption to decrease, and vice versa.
 
-<h5>Correlation between Pricing and EV Adoption (Corr_price_ev):</h5>
+<h4>Correlation between Pricing and EV Adoption (Corr_price_ev):</h4>
 The correlation coefficient is approximately -0.30.
 This negative correlation implies a moderate inverse relationship between pricing and electric vehicle adoption. As pricing increases, there is a tendency for EV adoption to decrease, and vice versa.
 
