@@ -84,8 +84,8 @@ Customization: Modify the data paths in the scripts to point to your datasets.</
     https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zipcode-2021
   
   <h4>Electric Vehicles Purchase Data</h4>
-  [Link to Dataset]
-  Description of the dataset and its significance.
+  <h6> 2010 - 2023 Electric Vehicle Transaction Data </h6>
+  https://shorturl.at/cikwz 
 
 <h2>Results</h2>
 
