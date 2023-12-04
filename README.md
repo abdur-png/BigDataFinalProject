@@ -59,6 +59,7 @@ Customization: Modify the data paths in the scripts to point to your datasets.</
   Description of the dataset and its significance.
 
 <h2>Results</h2>
-![Image from Repository](/visualizations/graph.png)
+
+![Image from Repository](/path/to/image.png)
 
 
