@@ -47,7 +47,8 @@ Customization: Modify the data paths in the scripts to point to your datasets.</
 <h2>Datasets</h2>
   
   <h4>Electricity Consumption Data</h4>
-  [Link to Dataset]
+  https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2023_Jan_Jun.csv
+  https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2016_Jul_Dec.csv
   Description of the dataset and its significance.
   
   <h4>Electricity Rates Data</h4>
