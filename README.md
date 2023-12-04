@@ -47,9 +47,26 @@ Customization: Modify the data paths in the scripts to point to your datasets.</
 <h2>Datasets</h2>
   
   <h4>Electricity Consumption Data</h4>
-  https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2023_Jan_Jun.csv
-  https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2016_Jul_Dec.csv
-  Description of the dataset and its significance.
+  Hourly grid consumption data from EIA US Energy Information Administration for the years 2016 - 2021.
+  <h6>2016_dataset</h6>
+    https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2016_Jan_Jun.csv
+    https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2016_Jul_Dec.csv
+  <h6>2017_dataset</h6>
+    https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2017_Jan_Jun.csv
+    https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2017_Jul_Dec.csv
+  <h6>2018_dataset</h6>
+    https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2018_Jan_Jun.csv
+    https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2018_Jul_Dec.csv
+  <h6>2019_dataset</h6>
+    https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2019_Jan_Jun.csv
+    https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2019_Jul_Dec.csv
+  <h6>2020_dataset</h6>
+    https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2020_Jan_Jun.csv
+    https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2020_Jul_Dec.csv
+  <h6>2021_dataset</h6>
+    https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2021_Jan_Jun.csv
+    https://www.eia.gov/electricity/gridmonitor/sixMonthFiles/EIA930_BALANCE_2021_Jul_Dec.csv
+  
   
   <h4>Electricity Rates Data</h4>
   [Link to Dataset]
