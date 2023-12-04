@@ -60,6 +60,6 @@ Customization: Modify the data paths in the scripts to point to your datasets.</
 
 <h2>Results</h2>
 
-![Image from Repository](/path/to/image.png)
+![list](/path/to/image.png)
 
 
