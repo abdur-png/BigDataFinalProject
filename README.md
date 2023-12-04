@@ -69,8 +69,19 @@ Customization: Modify the data paths in the scripts to point to your datasets.</
   
   
   <h4>Electricity Rates Data</h4>
-  [Link to Dataset]
-  Description of the dataset and its significance.
+  Data on utility rates over various years.
+  <h6>2016_dataset</h6>
+    https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zipcode-2016
+  <h6>2017_dataset</h6>
+    https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zipcode-2017
+  <h6>2018_dataset</h6>
+    https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zipcode-2018
+  <h6>2019_dataset</h6>
+    https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zipcode-2019
+  <h6>2020_dataset</h6>
+    https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zipcode-2020
+  <h6>2021_dataset</h6>
+    https://catalog.data.gov/dataset/u-s-electric-utility-companies-and-rates-look-up-by-zipcode-2021
   
   <h4>Electric Vehicles Purchase Data</h4>
   [Link to Dataset]
